@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'revue'
-  s.version     = '1.0.0'
+  s.version     = '1.0.1'
   s.date        = '2013-04-02'
   s.summary     = "Command line tool for accessing http://revue.io"
   s.description = "A gem for creating and fetching code reviews via the revue.io website"
