@@ -18,15 +18,15 @@ revue <diff_file>
 where [options] are:
 EOS
 
-  opt :url, "Use an alternative revue instance, e.g. a local installation", short: "-u", default: URL
-  opt :verbose, "Make the program more talkative", short: "-v"
-  opt :version, "Print version and exit", short: "-V"
+  opt :url, "Use an alternative revue instance, e.g. a local installation", :short => "-u", :default => URL
+  opt :verbose, "Make the program more talkative", :short => "-v"
+  opt :version, "Print version and exit", :short => "-V"
 end
 
 RestClient.proxy = ENV["#{PROTOCOL}_proxy"] if ENV["#{PROTOCOL}_proxy"]
 RestClient.log = STDOUT if opts[:verbose]
 begin
-  response = RestClient.post "#{opts[:url]}/#{PATH}", { 'content' => ARGF.read }.to_json, content_type: :json, accept: :json
+  response = RestClient.post "#{opts[:url]}/#{PATH}", { 'content' => ARGF.read }.to_json, :content_type => :json, :accept => :json
   puts JSON.parse(response)['url']
 rescue => e
   STDERR.puts JSON.parse(e.response)["errors"]
