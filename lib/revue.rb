@@ -7,7 +7,7 @@ URL = "#{PROTOCOL}://revue.io"
 PATH = "/api/v1"
 
 opts = Trollop::options do
-  version "revue 1.0.1 (c) 2013 Matthew Williams"
+  version "revue 1.0.2 (c) 2013 Matthew Williams"
   banner <<-EOS
 revue is a tool for creating code reviews from a diff file.
 
