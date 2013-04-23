@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.executables << 'revue'
   s.add_dependency "rest-client", "~> 1.6.7"
   s.add_dependency "trollop", "~> 2.0"
+  s.add_dependency "json"
   s.homepage    =
     'http://rubygems.org/gems/revue'
 end
